@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shohona-burger</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-logo">
+            <img src="images/Shohona.png" alt="Shohona Burger Logo">
+        </div>
+    </div>
+
+    <!-- Dark Mode Toggle -->
+    <button class="theme-toggle" id="themeToggle">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <!-- Mobile Contact Icon -->
+    <button class="mobile-contact-icon" id="mobileContactBtn">
+        <i class="fas fa-phone"></i>
+    </button>
+
+    <!-- Desktop Sidebar Menu -->
+    <nav class="sidebar" id="sidebar">
+        <div class="logo">
+            <img class="logo-img" src="images/Shohona.png" alt="Shohona Burger Logo">
+        </div>
+        <ul class="menu-list">
+            <li class="menu-item active" data-category="hammasi">
+                <i class="fas fa-list"></i>
+                <span>Hammasi</span>
+            </li>
+            <li class="menu-item" data-category="lavash">
+                <i class="fas fa-bread-slice"></i>
+                <span>Lavash</span>
+            </li>
+            <li class="menu-item" data-category="burger">
+                <i class="fas fa-burger"></i>
+                <span>Burger</span>
+            </li>
+            <li class="menu-item" data-category="fri">
+                <i class="fas fa-glass-water"></i>
+                <span>Fri</span>
+            </li>
+            <li class="menu-item" data-category="donar">
+                <i class="fas fa-hotdog"></i>
+                <span>Donar</span>
+            </li>
+            <li class="menu-item" data-category="xotdog">
+                <i class="fas fa-hot-dog"></i>
+                <span>Xot-Dog</span>
+            </li>
+            <li class="menu-item" data-category="bilyuda">
+                <i class="fas fa-utensils"></i>
+                <span>Bilyuda</span>
+            </li>
+            <li class="menu-item" data-category="ichimlik">
+                <i class="fas fa-wine-glass"></i>
+                <span>Ichimliklar</span>
+            </li>
+            <li class="menu-item" data-category="kombo">
+                <i class="fas fa-box-open"></i>
+                <span>Kombo (Set)</span>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Contact Sidebar -->
+    <div class="contact-sidebar" id="contactSidebar">
+        <button class="close-contact" id="closeContact">
+            <i class="fas fa-times"></i>
+        </button>
+        <div class="contact-sidebar-content">
+            <h2>Biz bilan bog'laning</h2>
+            <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <div>
+                    <h3>Telefon</h3>
+                    <a href="tel:+998901234567">+998 90 123 45 67</a>
+                </div>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-location-dot"></i>
+                <div>
+                    <h3>Manzil</h3>
+                    <p>Toshkent sh., Amir Temur ko'chasi, 123</p>
+                </div>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-clock"></i>
+                <div>
+                    <h3>Ish vaqti</h3>
+                    <p>Har kuni: 09:00 - 23:00</p>
+                </div>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <div>
+                    <h3>Email</h3>
+                    <p>info@shohona.uz</p>
+                </div>
+            </div>
+            <div class="social-links">
+                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-telegram"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Bottom Menu -->
+    <nav class="mobile-menu" id="mobileMenu">
+        <div class="menu-carousel">
+            <div class="menu-item active" data-category="hammasi">
+                <i class="fas fa-list"></i>
+                <span>Hammasi</span>
+            </div>
+            <div class="menu-item" data-category="lavash">
+                <i class="fas fa-bread-slice"></i>
+                <span>Lavash</span>
+            </div>
+            <div class="menu-item" data-category="burger">
+                <i class="fas fa-burger"></i>
+                <span>Burger</span>
+            </div>
+            <div class="menu-item" data-category="fri">
+                <i class="fas fa-glass-water"></i>
+                <span>Fri</span>
+            </div>
+            <div class="menu-item" data-category="donar">
+                <i class="fas fa-hotdog"></i>
+                <span>Donar</span>
+            </div>
+            <div class="menu-item" data-category="xotdog">
+                <i class="fas fa-hot-dog"></i>
+                <span>Xot-Dog</span>
+            </div>
+            <div class="menu-item" data-category="bilyuda">
+                <i class="fas fa-utensils"></i>
+                <span>Bilyuda</span>
+            </div>
+            <div class="menu-item" data-category="ichimlik">
+                <i class="fas fa-wine-glass"></i>
+                <span>Ichimliklar</span>
+            </div>
+            <div class="menu-item" data-category="kombo">
+                <i class="fas fa-box-open"></i>
+                <span>Kombo</span>
+            </div>
+            <button class="cart-btn" id="cartBtn">
+                🛒 Savat
+                <span class="cart-count" id="cartCount">0</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <div class="hero-logo">
+                    <img src="images/Shohona.png" alt="Shohona Burger Logo" class="hero-logo-img">
+                </div>
+                <p class="hero-subtitle">Mazali taomlar va ajoyib atmosfera</p>
+            </div>
+        </section>
+
+        <!-- Menu Sections -->
+        <div class="menu-container">
+            
+            <!-- LAVASH -->
+            <section class="menu-section" data-category="lavash">
+                <h2 class="section-title">🌯 Lavash</h2>
+                <div class="cards-grid">
+                    <div class="food-card">
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1626700051175-6818013e1d4f?w=400" alt="Lavash">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Klassik Lavash</h3>
+                            <p class="card-description">Go'sht, sabzavotlar va sous bilan</p>
+                            <div class="card-prices">
+                                <button class="add-to-cart price" onclick="addToCart('Klassik Lavash', 18000, 'https://images.unsplash.com/photo-1626700051175-6818013e1d4f?w=400')">18,000 so'm</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="food-card">
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=400" alt="Tovuqli Lavash">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Tovuqli Lavash</h3>
+                            <p class="card-description">Tovuq go'shti, pomidor, salat</p>
+                            <div class="card-prices">
+                                <button class="add-to-cart price" onclick="addToCart('Tovuqli Lavash', 20000, 'https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=400')">20,000 so'm</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- BURGER -->
+            <section class="menu-section" data-category="burger">
+                <h2 class="section-title">🍔 Burger</h2>
+                <div class="cards-grid">
+                    <div class="food-card">
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400" alt="Cheeseburger">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Cheeseburger</h3>
+                            <p class="card-description">Klassik burger pishloq bilan</p>
+                            <div class="card-prices">
+                                <button class="add-to-cart price" onclick="addToCart('Cheeseburger', 25000, 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400')">25,000 so'm</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="food-card">
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?w=400" alt="Double Burger">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Double Burger</h3>
+                            <p class="card-description">Ikki qavat go'sht va pishloq</p>
+                            <div class="card-prices">
+                                <button class="add-to-cart price" onclick="addToCart('Double Burger', 35000, 'https://images.unsplash.com/photo-1550547660-d9450f859349?w=400')">35,000 so'm</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FRI -->
+            <section class="menu-section" data-category="fri">
+                <h2 class="section-title">🍟 Fri</h2>
+                <div class="cards-grid">
+                    <div class="food-card">
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=400" alt="French Fries">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Kartoshka Fri</h3>
+                            <p class="card-description">Xusxusli kartoshka fri</p>
+                            <div class="card-prices">
+                                <button class="add-to-cart price" onclick="addToCart('Kartoshka Fri', 12000, 'https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=400')">12,000 so'm</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="food-card">
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1630431341973-02e1d36e7b08?w=400" alt="Cheese Fries">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Cheese Fri</h3>
+                            <p class="card-description">Pishloqli kartoshka fri</p>
+                            <div class="card-prices">
+                                <button class="add-to-cart price" onclick="addToCart('Cheese Fri', 15000, 'https://images.unsplash.com/photo-1630431341973-02e1d36e7b08?w=400')">15,000 so'm</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- DONAR -->
+            <section class="menu-section" data-category="donar">
+                <h2 class="section-title">🌮 Donar</h2>
+                <div class="cards-grid">
+                    <div class="food-card">
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1529006557810-274b9b2fc783?w=400" alt="Donar">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Klassik Donar</h3>
+                            <p class="card-description">Go'sht va maxsus sous bilan</p>
+                            <div class="card-prices">
+                                <button class="add-to-cart price" onclick="addToCart('Klassik Donar', 22000, 'https://images.unsplash.com/photo-1529006557810-274b9b2fc783?w=400')">22,000 so'm</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="food-card">
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1603360946369-dc9bb6258143?w=400" alt="Tovuqli Donar">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Tovuqli Donar</h3>
+                            <p class="card-description">Tovuq go'shti va sabzavotlar</p>
+                            <div class="card-prices">
+                                <button class="add-to-cart price" onclick="addToCart('Tovuqli Donar', 24000, 'https://images.unsplash.com/photo-1603360946369-dc9bb6258143?w=400')">24,000 so'm</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- XOT-DOG -->
+            <section class="menu-section" data-category="xotdog">
+                <h2 class="section-title">🌭 Xot-Dog</h2>
+                <div class="cards-grid">
+                    <div class="food-card">
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1612392062798-2bdc258c90a3?w=400" alt="Hot Dog">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Klassik Xot-Dog</h3>
+                            <p class="card-description">Sosiska, ketcup, xantal</p>
+                            <div class="card-prices">
+                                <button class="add-to-cart price" onclick="addToCart('Klassik Xot-Dog', 15000, 'https://images.unsplash.com/photo-1612392062798-2bdc258c90a3?w=400')">15,000 so'm</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="food-card">
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=400" alt="Cheese Hot Dog">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Cheese Xot-Dog</h3>
+                            <p class="card-description">Pishloqli xot-dog</p>
+                            <div class="card-prices">
+                                <button class="add-to-cart price" onclick="addToCart('Cheese Xot-Dog', 18000, 'https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=400')">18,000 so'm</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- BILYUDA -->
+            <section class="menu-section" data-category="bilyuda">
+                <h2 class="section-title">🍽️ Bilyuda</h2>
+                <div class="cards-grid">
+                    <div class="food-card">
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=400" alt="Pasta">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Pasta</h3>
+                            <p class="card-description">Italyan pastasi</p>
+                            <div class="card-prices">
+                                <button class="add-to-cart price" onclick="addToCart('Pasta', 28000, 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=400')">28,000 so'm</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="food-card">
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=400" alt="Pitsa">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Pitsa</h3>
+                            <p class="card-description">Go'sht va sebzavotli pitsa</p>
+                            <div class="card-prices">
+                                <button class="add-to-cart price" onclick="addToCart('Pitsa', 45000, 'https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=400')">45,000 so'm</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ICHIMLIKLAR -->
+            <section class="menu-section" data-category="ichimlik">
+                <h2 class="section-title">🥤 Ichimliklar</h2>
+                <div class="cards-grid">
+                    <div class="food-card">
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400" alt="Cola">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Coca Cola</h3>
+                            <p class="card-description">Sovuq ichimlik</p>
+                            <div class="card-prices">
+                                <button class="add-to-cart price" onclick="addToCart('Coca Cola', 8000, 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400')">8,000 so'm</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="food-card">
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1600271886742-f049cd451bba?w=400" alt="Fresh">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Fresh Sharbati</h3>
+                            <p class="card-description">Yangi siqilgan meva sharbati</p>
+                            <div class="card-prices">
+                                <button class="add-to-cart price" onclick="addToCart('Fresh Sharbati', 12000, 'https://images.unsplash.com/photo-1600271886742-f049cd451bba?w=400')">12,000 so'm</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- KOMBO SET -->
+            <section class="menu-section" data-category="kombo">
+                <h2 class="section-title">📦 Kombo (Set)</h2>
+                <div class="cards-grid">
+                    <div class="food-card">
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1619365908288-1e5170ba36c0?w=400" alt="Oilaviy set">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Oilaviy Set</h3>
+                            <p class="card-description">Burger, fri, ichimlik (4 kishi)</p>
+                            <div class="card-prices">
+                                <button class="add-to-cart price" onclick="addToCart('Oilaviy Set', 85000, 'https://images.unsplash.com/photo-1619365908288-1e5170ba36c0?w=400')">85,000 so'm</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="food-card">
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1623428187969-5da2dcea5ebf?w=400" alt="Solo set">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Solo Set</h3>
+                            <p class="card-description">Burger, fri, cola</p>
+                            <div class="card-prices">
+                                <button class="add-to-cart price" onclick="addToCart('Solo Set', 38000, 'https://images.unsplash.com/photo-1623428187969-5da2dcea5ebf?w=400')">38,000 so'm</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- === Savat Modal === -->
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-content">
+            
+            <!-- Savat Header -->
+            <div class="cart-header">
+                <h2>🛒 Savatingiz</h2>
+                <button class="close-btn" id="closeCart">&times;</button>
+            </div>
+
+            <!-- Savat ichidagi mahsulotlar -->
+            <div class="cart-items" id="cartItems">
+                <!-- JS orqali to'ladi -->
+            </div>
+
+            <!-- Savat pastki qismi -->
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <h3>Jami summa:</h3>
+                    <h3 class="total-price" id="totalPrice">0 so'm</h3>
+                </div>
+                <button class="checkout-btn">Buyurtma berish</button>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="./js/app.js"></script>
+</body>
+</html>
